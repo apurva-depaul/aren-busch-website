@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+/* Layout tokens measured from the reference page; typography follows the Aren & Busch brand guidelines. */
+@theme {
+  /* Brand type: Bricolage Grotesque (logo, headlines, signage · 600/700),
+     Instrument Sans (body, proposals, website · 400/700),
+     IBM Plex Mono (numbers, rates, references · 400/500). */
+  --font-display: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Instrument Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-cream: #fff7e5;     /* project index background */
+  --color-paper: #fcf6e9;     /* primary light text */
+  --color-ink: #030000;       /* footer + scrolled nav */
+  --color-ink-soft: #1b1915;
+  --color-sand: #c7c0af;      /* card meta text */
+  --color-sand-dim: #bab3a2;  /* hero subtitle */
+  --color-gold: #d9c390;      /* footer column titles */
+  --color-stone: #897f6c;     /* footer muted text + giant wordmark */
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-roll: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Page gutter: 24px phone, 40px tablet, 72px desktop (matches the 1296px container). */
+:root {
+  --gutter: 24px;
+}
+@media (min-width: 810px) {
+  :root { --gutter: 40px; }
+}
+@media (min-width: 1200px) {
+  :root { --gutter: 72px; }
+}
+
+/*
+ * Brand typographic hierarchy (guideline sizes; Display is the web hero scale).
+ *   Display     Bricolage 700 · 88/88   — hero title
+ *   Headline    Bricolage 700 · 40/44   — section + card titles
+ *   Subheading  Bricolage 600 · 26/32
+ *   Body        Instrument Sans 400 · 16/26  (700 for emphasis / buttons)
+ *   Data        IBM Plex Mono 500 · 15/22   — years, phone, CIN, references
+ */
+@utility type-display {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+@utility type-headline {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 44px;
+  letter-spacing: -0.02em;
+}
+@utility type-subheading {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 32px;
+  letter-spacing: -0.01em;
+}
+@utility type-body {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+}
+@utility type-data {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 22px;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  background: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}

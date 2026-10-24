@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { asset } from '../asset.js'
 import { DotLink, EASE } from './motion.jsx'
 
 // Double-chevron separator, path copied from the live breadcrumb icon.
@@ -29,7 +30,7 @@ export default function Hero() {
     <section className="relative h-[620px] overflow-hidden bg-ink md:h-[691px] xl:h-svh xl:min-h-[720px]">
       {/* Image settles from 1.4x to 1x on load. */}
       <motion.img
-        src="/images/hero-cranes.webp"
+        src={asset('images/hero-cranes.webp')}
         alt="Construction cranes framing a modern building under development at dusk, with a historic skyscraper in the background."
         className="absolute inset-0 size-full object-cover"
         initial={{ scale: 1.4 }}

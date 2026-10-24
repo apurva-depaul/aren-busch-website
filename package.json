@@ -1,6 +1,7 @@
 {
   "name": "aren-busch-website",
   "private": true,
+  "homepage": "https://apurva-depaul.github.io/aren-busch-website/",
   "version": "0.1.0",
   "type": "module",
   "scripts": {

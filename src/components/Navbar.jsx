@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { AnimatePresence, motion, useMotionValueEvent, useScroll } from 'framer-motion'
 import { DotLink, EASE, RollText, SquareIcon } from './motion.jsx'
+import { asset } from '../asset.js'
 import { navLinks } from '../data/projects.js'
 
 export default function Navbar() {
@@ -20,7 +21,7 @@ export default function Navbar() {
     >
       <nav className="relative mx-auto flex h-[88px] w-full max-w-[1440px] items-center justify-between px-(--gutter)">
         <a href="#" aria-label="Aren & Busch — home" className="block">
-          <img src="/brand/ab-lockup-reverse.svg" alt="Aren & Busch" className="h-11 w-auto" width="101" height="44" />
+          <img src={asset('brand/ab-lockup-reverse.svg')} alt="Aren & Busch" className="h-11 w-auto" width="101" height="44" />
         </a>
 
         <ul className="absolute left-1/2 hidden -translate-x-1/2 items-center lg:flex">

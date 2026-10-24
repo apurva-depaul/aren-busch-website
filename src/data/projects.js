@@ -1,3 +1,5 @@
+import { asset } from '../asset.js'
+
 export const projects = [
   {
     slug: 'g4-residential-apartments',
@@ -5,7 +7,7 @@ export const projects = [
     client: 'Aren & Busch',
     category: 'Residential · stilt parking',
     detail: 'In planning',
-    image: '/images/northline-penthouse.webp',
+    image: asset('images/northline-penthouse.webp'),
     alt: 'Two-storey concrete and brick house under construction, with timber formwork on the roof.',
   },
   {
@@ -14,7 +16,7 @@ export const projects = [
     client: 'Eastern Railway',
     category: 'Office interiors · IGBC',
     detail: 'Liluah, West Bengal · 2024–25',
-    image: '/images/glassyard-offices.webp',
+    image: asset('images/glassyard-offices.webp'),
     alt: 'Low-angle view of an orange brick office facade rising into a deep blue sky.',
   },
   {
@@ -23,7 +25,7 @@ export const projects = [
     client: 'RVNL',
     category: 'Railway works',
     detail: 'Khurda Road Division · 2023',
-    image: '/images/harbor-retail-block.webp',
+    image: asset('images/harbor-retail-block.webp'),
     alt: 'Tower crane above a concrete building frame with timber formwork and red-and-white safety barriers.',
   },
   {
@@ -32,7 +34,7 @@ export const projects = [
     client: 'Eastern Railway',
     category: 'Healthcare renovation',
     detail: 'Liluah, West Bengal',
-    image: '/images/weston-medical-wing.webp',
+    image: asset('images/weston-medical-wing.webp'),
     alt: 'Worker in an orange cap measuring a wall of aerated concrete blocks.',
   },
   {
@@ -41,7 +43,7 @@ export const projects = [
     client: 'Odisha WRD',
     category: 'Irrigation',
     detail: 'Cuttack, Odisha · 2024',
-    image: '/images/ironvale-logistics-hub.webp',
+    image: asset('images/ironvale-logistics-hub.webp'),
     alt: 'Conveyor belt with orange rollers running through an industrial facility.',
   },
   {
@@ -50,7 +52,7 @@ export const projects = [
     client: 'Odisha WRD',
     category: 'Irrigation',
     detail: 'Cuttack, Odisha · 2025–26',
-    image: '/images/weston-living-group.webp',
+    image: asset('images/weston-living-group.webp'),
     alt: 'Steel rebar and yellow column formwork on a concrete construction site.',
   },
 ]
